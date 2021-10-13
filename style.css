@@ -1,0 +1,17 @@
+.practice {
+  display: flex;
+  justify-content: center;
+}
+
+.div {
+  margin: 20px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+h1 {
+  font-size: 20px;
+}

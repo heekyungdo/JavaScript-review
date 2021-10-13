@@ -7,7 +7,7 @@
 // let (added in ES6)
 let globalName = "global name";
 {
-  let name = "ellie";
+  let name = "heekyung";
   console.log(name);
   name = "hello";
   console.log(name);
@@ -41,7 +41,7 @@ const maxNumber = 5;
 
 // 4. Variable types (primitive타입인지, object 타입인지에 따라 메모리에 다른 방식으로 저장된다.)
 // primitive, single item: number. string, boolean, null, undefined, symbol
-// primmitive 타입은 value로 값이 메모리에 저장된다. 그래서 변경 불가능 
+// primmitive 타입은 value로 값이 메모리에 저장된다. 그래서 변경 불가능
 // object, box container
 // object는 메모리가 너무 커서 한번에 다 올라갈 수가 없다. object를 가리키는 reference가 저장된다. reference는 실제로 object가 담겨있는 메모리를 가리킨다.
 // 그래서 const heeekyung이라고 선언하면, heekyung을 가리키는 포인터만 잠겨서 heekyung이 다른 object로 변경이 불가하지만, heekyung의 나이와, 사는 곳은 변경 가능

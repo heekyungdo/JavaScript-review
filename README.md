@@ -18,6 +18,9 @@
 </html>
 ```
 
+![script1](https://user-images.githubusercontent.com/85210506/138698985-811d3b00-c398-400b-b0ae-c276c8dfdecd.jpg width=40)
+
+  
 ##### 과정
 
 1. HTML을 위에서 아래로 쭉 parsing
@@ -51,6 +54,9 @@
 </html>
 ```
 
+![script2](https://user-images.githubusercontent.com/85210506/138699083-49ecca9d-b313-4646-b600-f1193da4fdef.jpg width=40)
+
+  
 ##### 과정
 
 1. 브라우저가 HTML 다운 후 위에서 아래로 parsing 후 페이지 준비
@@ -83,8 +89,12 @@
     <div></div>
   </body>
 </html>
-```
+``` 
+![script3](https://user-images.githubusercontent.com/85210506/138699160-0a834cab-6aef-4153-b7d7-2462cca63108.jpg width=40)
+  
+![script 여러개 정의 시](https://user-images.githubusercontent.com/85210506/138699248-1637106f-4ccb-431a-acfc-b8eb1ddcf0b8.jpg width=40)
 
+  
 ##### 과정
 
 1. 브라우저가 HTML 다운 후 parsing 하다가
@@ -123,6 +133,10 @@
 </html>
 ```
 
+![script4](https://user-images.githubusercontent.com/85210506/138699361-e2b8b60d-784d-4551-9606-da63e04082df.jpg width=40)
+![script 여러개 정의 시](https://user-images.githubusercontent.com/85210506/138699368-43be2115-bb0f-4267-936c-767ddcefec2a.jpg width=40)
+
+  
 ##### 과정
 
 1. 브라우저가 HTML 다운 후 parsing 하다가

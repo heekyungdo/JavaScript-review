@@ -1,4 +1,4 @@
-# JavaScript
+# Java Script
 
 ## async vs defer
 

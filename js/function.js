@@ -1,6 +1,6 @@
 //.filter에 대한 설명
 // sexyFilter함수는 반드시 true를 리턴해야해.
-// 만약 새 array에도 이 1,2,3,4를 포함하고 싶으면, flase를 리턴하면 그 item은 새 array에 포함되지 않아
+// 만약 새 array에도 이 1,2,3,4를 포함하고 싶으면, faulse를 리턴하면 그 item은 새 array에 포함되지 않아
 // function sexyFilter() {
 // console.log("I'm rich");
 // }

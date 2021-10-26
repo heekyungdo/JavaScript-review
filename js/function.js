@@ -58,7 +58,7 @@ function printAll(...args) {
   for (const arg of args) {
     console.log(arg);
   }
-  args.forEach((arg) => console.log(arg));
+  // args.forEach((arg) => console.log(arg));
 }
 printAll("Hello", "Hi", "guys");
 // Hello
@@ -103,7 +103,7 @@ function showLocal() {
 showLocal();
 // showAnother(); // 밖에서 호출 안됨
 
-// 6. Return a value
+// 6. Return a value //
 // parameters로 값을 전달받아서 계산된 값을 return한다.
 function sum(a, b) {
   return a + b;
@@ -112,7 +112,7 @@ const result = sum(1, 2);
 console.log(`sum: ${sum(1, 2)}`); // sum: 3
 console.log(result); // 3
 
-// 7. Early return, early exit
+// 7. Early return, early exit //
 // bad
 // ~ 일 때에 이렇게 한다라고 작성하게 되면,
 // 블럭 안에서 logic을 많이 작성하면 가독성 떨어진다.
@@ -132,6 +132,93 @@ function upgradeUser(user) {
   }
   // long upgrade logic...
 }
+
+// First-class function //
+// functions are treated like any other variable
+// can be assigned as a value to variable
+// can be passed as an argument to other functions.
+// can be returned by another function
+
+// 1. Function expression //
+// a function declaration can be called earlier than it is defined. (hoisted) 정의되기 전 호출 가능
+// a function expression is created when the execution reaches it. 변수 할당된 다음 호출 가능
+
+// named function e.g. function print ()
+// anonymous function e.g. function ()
+const print = function () {
+  console.log("print"); // print // print
+};
+print();
+const printAgain = print;
+printAgain();
+// 위 쪽에 sum함수 정의했어
+const sumAgain = sum;
+console.log(sumAgain(1, 3)); // 4
+
+// 2. Callback function using function expression //
+// callback 함수는 함수를 전달해서(parameters) 상황에 맞으면, 니가 원하면 전달된 함수를 불러
+// printYes(), printNo() 두가지의 callback functions가 parameters로 전달되어서
+// answer가 love you가 맞으면, printYes라는 callback 함수를 호출하게 되고,
+// 정답이 아니면 printNo라는 callback 함수를 호출하게된다.
+function randomQuiz(answer, printYes, printNo) {
+  if (answer === "love you") {
+    printYes();
+  } else {
+    printNo();
+  }
+}
+// printYes라는 변수에 yes를 출력하는 함수 할당
+const printYes = function () {
+  console.log("yes!");
+};
+
+// named function
+// better debuggin in debugger's stack traces. debuggin할 때, debugger's stack traces에 함수 이름을 하기 위해서 사용
+// recursions. 함수 안에서 자신 스스로 또 다른 함수를 호출할 때 사용
+// printNo라는 변수에 no를 출력하는 함수 할당
+const printNo = function print() {
+  console.log("no!"); // no! -> printYes보다 먼저 출력
+  // print(); // no!가 계속 호출된다.
+};
+// randomQuiz를 호출할 때 answer과 printYes, printNo의 콜백 함수들을 각각 전달해 놓았다
+randomQuiz("wrong", printYes, printNo); // no!, yes! 순으로 출력
+randomQuiz("love you", printYes, printNo); // yes!만 출력
+
+// Arrow function //
+// always anonymous
+// const simplePrint = function () {
+// console.log("simplePrint!"); // simplePrint1
+// };
+// simplePrint();
+
+// How to use arrow function??
+// 1. function 2. {} 순으로 삭제 3. => 으로 연결
+const simplePrint = () => console.log("simplePrint!"); // simplePrint!
+simplePrint();
+
+const add = (a, b) => a + b;
+console.log(add(1, 2)); // 3
+
+// 함수 안에서 다양한 일을 해야해서 블럭이 필요하다면, 이렇게 사용
+// 대신 블럭을 사용하려면, return 키워드 이용해서 값 return해 줘야돼.
+const simpleMultiply = (a, b) => {
+  // do something more
+  return a + b;
+};
+console.log(simpleMultiply(1, 3)); // 4
+
+// IIFE : Immediately Invoked Function Expression //
+// 함수 선언하게 되면, 따로 함수 호출해야한다.
+function hola() {
+  console.log("IIFE");
+}
+hola(); //IIFE
+
+// 함수 선언함과 동시에 바로 호출하는 방법
+// 함수의 선언을 괄호로 묶는다 -> 함수 호출하듯이 () 추가 작성
+(function hola() {
+  console.log("IIFE");
+})(); // IIFE
 
 //.filter에 대한 설명
 // sexyFilter함수는 반드시 true를 리턴해야해.

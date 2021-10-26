@@ -131,9 +131,9 @@ console.log(`value: ${symbol1.description}, value:${typeof symbol1}`); // value:
 // const로 정의되있기 때문에 clara가 가리키고 있는 메모리의 포인터는 잠겨있어서 다른 object로 할당이 불가하지만,
 // object 안에는 name과 age라는 변수들이 존재하기 때문에 clara.name, clara.age으로 하면
 // 각각 포인터가 가리키고 있는 메모리에 다른 값으로 할당이 가능하다.
-const clara = { name: "clara", age: 20 };
+const claraDo = { name: "clara", age: 20 };
 
-clara.age = 22;
+claraDo.age = 22;
 
 // 5. Dynamic typing : dynamically typed language //
 let text = "hello";
